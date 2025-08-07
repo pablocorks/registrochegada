@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-  <title>Recepção - Dr. Pablo</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chegada - [Seu Consultório]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="logo-icon.png"> <meta name="theme-color" content="#F5F5DC"> </head>
 <body>
-  <div class="container">
-    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=450,fit=crop,q=95/YKb6JqwEKrh8bXzQ/logo-topo-site-m7VbqxOj0LSozK7v.png" alt="Logo">
-    <button onclick="window.location.href='registrar.html'">AVISAR QUE CHEGUEI</button>
-  </div>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
+    <div class="container">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=450,fit=crop,q=95/YKb6JqwEKrh8bXzQ/logo-topo-site-m7VbqxOj0LSozK7v.png" alt="Sua Logomarca" class="logo">
+        <button id="btnAvisarCheguei" class="main-button">AVISAR QUE CHEGUEI</button>
+    </div>
+
+    <script>
+        // Registrar o Service Worker para o PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Falha ao registrar o Service Worker:', error);
+                    });
+            });
+        }
+
+        document.getElementById('btnAvisarCheguei').addEventListener('click', () => {
+            window.location.href = 'checkin.html';
+        });
+    </script>
 </body>
 </html>
