@@ -1,38 +1,73 @@
 body {
-  margin: 0;
-  background-color: #f5f5dc; /* Bege claro */
-  font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F5F5DC; /* Bege Claro */
+    color: #333;
+    text-align: center;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Ajuste para tablets */
+    width: 400px; /* Largura base para o conteúdo */
 }
 
-img {
-  width: 300px;
-  margin-bottom: 40px;
+.logo {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
-button {
-  padding: 20px 40px;
-  font-size: 24px;
-  background-color: #3f51b5;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.main-button {
+    background-color: #4CAF50; /* Um verde atraente */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5em; /* Tamanho maior para tablets */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
 }
 
-input {
-  padding: 20px;
-  font-size: 20px;
-  width: 80%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+.main-button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Ajuste para padding */
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-sizing: border-box; /* Inclui padding no width */
+    text-align: center; /* Centraliza o texto */
+}
+
+.status-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green; /* Cor para mensagens de sucesso */
+}
+
+/* Media query para telas maiores, se necessário, mas para tablet, o acima já deve ser bom */
+@media (min-width: 768px) {
+    .container {
+        width: 500px;
+    }
 }
