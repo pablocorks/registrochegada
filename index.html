@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Recepção - Dr. Pablo</title>
+</head>
+<body>
+  <div class="container">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=450,fit=crop,q=95/YKb6JqwEKrh8bXzQ/logo-topo-site-m7VbqxOj0LSozK7v.png" alt="Logo">
+    <button onclick="window.location.href='registrar.html'">AVISAR QUE CHEGUEI</button>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

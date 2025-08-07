@@ -1,0 +1,15 @@
+{
+  "name": "Recepção Dr. Pablo",
+  "short_name": "Recepção",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5dc",
+  "theme_color": "#3f51b5",
+  "icons": [
+    {
+      "src": "https://assets.zyrosite.com/YKb6JqwEKrh8bXzQ/logo-topo-site-m7VbqxOj0LSozK7v.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
